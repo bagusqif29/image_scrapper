@@ -39,7 +39,7 @@ with st.form("Search"):
                         srcset = img.get('srcset')
                         
                         # Cetak atribut 'srcset' jika ada
-                        if srcset is not None and count < 35:
+                        if srcset is not None and count < 36:
                             count+=1
                             srcset_parts = srcset.split(", ")
                             for part in srcset_parts:
