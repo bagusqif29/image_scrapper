@@ -5,6 +5,8 @@ from bs4 import BeautifulSoup
 st.markdown("""
     <style>
     #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
     .stDeployButton {display:none;}
     </style>
     """, unsafe_allow_html=True)
