@@ -10,7 +10,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 
-st.markdown("<h1 style= 'text-align:center;'>Web Scrapperrrrrr</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style= 'text-align:center;'>Web Scrapper</h1>", unsafe_allow_html=True)
 
 with st.form("Search"):
     keyword = st.text_input("Enter Your Keyword")
