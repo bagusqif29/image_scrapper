@@ -2,12 +2,12 @@ import streamlit as st
 import requests
 from bs4 import BeautifulSoup
 
-# st.markdown("""
-#     <style>
-#     #MainMenu {visibility: hidden;}
-#     .stDeployButton {display:none;}
-#     </style>
-#     """, unsafe_allow_html=True)
+st.markdown("""
+    <style>
+    #MainMenu {visibility: hidden;}
+    .stDeployButton {display:none;}
+    </style>
+    """, unsafe_allow_html=True)
 
 
 st.markdown("<h1 style= 'text-align:center;'>Web Scrapper</h1>", unsafe_allow_html=True)
