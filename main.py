@@ -50,7 +50,7 @@ with st.form("Search"):
                                     
                                     set_link.add(image_url)
         
-        # st.title(f'Length of list_link: {len(list_link)}')
+        st.title(f'Length of list_link: {len(set_link)}')
         
         # st.title(f'Length of ripi6: {len(rows)}')
         # st.title(f'Length of figures: {len(figures)}')
