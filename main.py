@@ -27,7 +27,7 @@ with st.form("Search"):
         rows = soup.find_all("div", class_ = "ripi6")
         for row in rows:
             figures = row.find_all("figure")
-            for i in range(min(2, len(figures))):
+            for figure in figures:
                 divs = soup.find_all('div', class_='MorZF')
 
                 for div in divs:
