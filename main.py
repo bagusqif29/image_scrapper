@@ -49,7 +49,12 @@ with st.form("Search"):
                                     
                                     list_link.append(image_url)
         
-        st.title(f'Length of list_link: {len(figures)}')
+        st.title(f'Length of list_link: {len(list_link)}')
+        
+        st.title(f'Length of ripi6: {len(rows)}')
+        st.title(f'Length of figures: {len(figures)}')
+        st.title(f'Length of morzl: {len(divs)}')
+        st.title(f'Length of image: {len(images)}')
         for a in range(len(list_link)):
             if a%2 == 0:
                 col1.image(list_link[a])
