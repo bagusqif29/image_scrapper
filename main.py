@@ -21,6 +21,7 @@ with st.form("Search"):
     if search:
         count = 0
         list_link = []
+        set_link = set()
         col1, col2 = st.columns(2)
         page = requests.get(f"https://unsplash.com/s/photos/{keyword}")
         soup = BeautifulSoup(page.content, 'lxml')
@@ -39,7 +40,7 @@ with st.form("Search"):
                         srcset = img.get('srcset')
                         
                         # Cetak atribut 'srcset' jika ada
-                        if srcset is not None and count < 36:
+                        if srcset is not None and len(set_link) < 36:
                             count+=1
                             srcset_parts = srcset.split(", ")
                             for part in srcset_parts:
@@ -47,17 +48,17 @@ with st.form("Search"):
                                     # Extract the URL part before ' 1800w'
                                     image_url = part.split(" ")[0]
                                     
-                                    list_link.append(image_url)
+                                    set_link.add(image_url)
         
-        st.title(f'Length of list_link: {len(list_link)}')
+        # st.title(f'Length of list_link: {len(list_link)}')
         
-        st.title(f'Length of ripi6: {len(rows)}')
-        st.title(f'Length of figures: {len(figures)}')
-        st.title(f'Length of morzl: {len(divs)}')
-        st.title(f'Length of image: {len(images)}')
-        for a in range(len(list_link)):
+        # st.title(f'Length of ripi6: {len(rows)}')
+        # st.title(f'Length of figures: {len(figures)}')
+        # st.title(f'Length of morzl: {len(divs)}')
+        # st.title(f'Length of image: {len(images)}')
+        for a, link in enumerate(set_link):
             if a%2 == 0:
-                col1.image(list_link[a])
+                col1.image(set_link)
             else:
-                col2.image(list_link[a])
+                col2.image(set_link)
                                     
