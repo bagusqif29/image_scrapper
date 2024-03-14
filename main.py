@@ -58,7 +58,7 @@ with st.form("Search"):
         # st.title(f'Length of image: {len(images)}')
         for a, link in enumerate(set_link):
             if a%2 == 0:
-                col1.image(set_link)
+                col1.image(link)
             else:
-                col2.image(set_link)
+                col2.image(link)
                                     
